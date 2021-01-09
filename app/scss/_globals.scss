@@ -324,13 +324,16 @@ main {
       font-size: 2.2rem !important;
     }
     .events-container {
-      grid-template-columns: auto !important;
+      grid-template-columns: 1fr !important;
       justify-items: center;
     }
     .event-card {
       grid-template-rows: 200px auto auto !important;
       grid-column: 1 / 2;
-      width: 350px;
+      width: 100%;
+    }
+    .card-image {
+      background-size: 100% 100% !important;
     }
     a.view-more {
       padding: .7rem;

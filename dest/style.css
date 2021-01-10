@@ -67,6 +67,11 @@ h1 {
   display: flex;
 }
 
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
 .ml {
   margin-left: auto;
 }
@@ -82,10 +87,32 @@ h1 {
   padding: 8px 0;
 }
 
+.heading-title {
+  font-size: 3rem;
+  font-weight: normal;
+  letter-spacing: 3px;
+}
+
 .card-big-heading {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1 / 3;
+}
+
+.title-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.title-image {
+  width: 150px;
 }
 
 .top-header-container {
@@ -135,6 +162,10 @@ h1 {
 }
 
 .link-list-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
@@ -154,7 +185,7 @@ h1 {
   transition: all .3s ease;
 }
 
-main .landing-container {
+main section.landing-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% 50%;
@@ -162,44 +193,36 @@ main .landing-container {
   padding: 3% 10%;
 }
 
-main .landing-container .landing-content {
+main section.landing-container .landing-content {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
 }
 
-main .landing-container .landing-content p {
+main section.landing-container .landing-content p {
   color: #686868;
   font-size: 2rem;
-  font-weight: 400;
 }
 
-main .landing-container .landing-content button {
+main section.landing-container .landing-content button {
   border-radius: 13px;
   padding: 10px 30px;
 }
 
-main .landing-container .scholar-node-img {
+main section.landing-container .scholar-node-img {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
   position: relative;
 }
 
-main .latest-events {
+main section.latest-events {
   background-color: whitesmoke;
   padding: 8% 10% 3% 10%;
   text-align: center;
 }
 
-main .latest-events .events-heading {
-  font-size: 3rem;
-  font-weight: normal;
-  letter-spacing: 7px;
-  margin-bottom: 2.5rem;
-}
-
-main .latest-events .events-container {
+main section.latest-events .events-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -207,7 +230,7 @@ main .latest-events .events-container {
   gap: 20px;
 }
 
-main .latest-events .events-container .event-card {
+main section.latest-events .events-container .event-card {
   background-color: #fff;
   border: none;
   color: #101010;
@@ -221,7 +244,7 @@ main .latest-events .events-container .event-card {
   position: relative;
 }
 
-main .latest-events .events-container .card-overlay {
+main section.latest-events .events-container .card-overlay {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -243,14 +266,14 @@ main .latest-events .events-container .card-overlay {
   width: 0%;
 }
 
-main .latest-events .events-container .event-card:hover > .card-overlay {
+main section.latest-events .events-container .event-card:hover > .card-overlay {
   opacity: 1;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
   width: 100%;
 }
 
-main .latest-events .events-container span {
+main section.latest-events .events-container span {
   background-color: rgba(114, 114, 114, 0.7);
   border: 1px solid #fff;
   color: white;
@@ -258,7 +281,7 @@ main .latest-events .events-container span {
   padding: .8rem;
 }
 
-main .latest-events .events-container .card-image {
+main section.latest-events .events-container .card-image {
   background: no-repeat center center;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -268,7 +291,7 @@ main .latest-events .events-container .card-image {
   grid-row: 1 / 2;
 }
 
-main .latest-events .events-container .card-title {
+main section.latest-events .events-container .card-title {
   font-size: 1.3rem;
   font-weight: bold;
   -ms-grid-column: 1;
@@ -280,18 +303,17 @@ main .latest-events .events-container .card-title {
   padding: .2rem .5rem;
 }
 
-main .latest-events .events-container .card-date {
+main section.latest-events .events-container .card-date {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3 / 4;
-  position: relative;
   padding: .2rem .5rem;
 }
 
-main a.view-more {
+main section.latest-events a.view-more {
   background-color: rgba(114, 114, 114, 0.7);
   color: #fff;
   display: inline-block;
@@ -299,10 +321,94 @@ main a.view-more {
   padding: 1rem;
 }
 
-main a.view-more:hover {
+main section.latest-events a.view-more:hover {
   color: rgba(255, 255, 255, 0.5);
   -webkit-transition: color .2s ease-in-out;
   transition: color .2s ease-in-out;
+}
+
+main .instruction {
+  padding: 8% 10% 3% 10%;
+  text-align: center;
+}
+
+main .instruction__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+
+main .instruction__grant_req_container {
+  padding: 1.6rem 0;
+  width: 30%;
+}
+
+main .instruction__title {
+  font-size: 1.7rem;
+}
+
+main .instruction__grant_req {
+  display: block;
+}
+
+main .instruction__items {
+  color: #686868;
+  display: list-item;
+  font-size: 1rem;
+  list-style: disc;
+  margin-top: .5rem;
+}
+
+main .instruction__application_form {
+  text-decoration: underline;
+}
+
+main .instruction__follow_steps_container {
+  padding: 1.6rem 0 1.6rem 1.6rem;
+}
+
+main .instruction__title_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .instruction__pointing_right {
+  width: 60px;
+  height: 60px;
+}
+
+main .instruction__steps_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 2rem;
+}
+
+main .instruction__steps {
+  text-align: center;
+  padding: 0 1rem;
+  width: 25%;
+}
+
+main .instruction__step_image {
+  border-radius: 7px;
+  width: 100%;
+}
+
+main .instruction__description {
+  color: #686868;
+  font-size: 1rem;
 }
 
 @media (max-width: 1000px) {
@@ -325,17 +431,16 @@ main a.view-more:hover {
   }
   .link-list-container {
     display: block;
-    background-color: #c5a45d;
     bottom: 0;
     overflow-y: scroll;
     padding: 15px 20px;
     position: fixed;
-    right: -400px;
+    right: -320px;
     text-align: left;
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
     top: 0;
-    width: 400px;
+    width: 320px;
   }
   .link-list-container ul {
     display: block;
@@ -362,7 +467,7 @@ main a.view-more:hover {
     transition: all .5s ease;
   }
   main .landing-container {
-    display: block;
+    display: block !important;
     padding: 2rem;
     text-align: center;
   }
@@ -378,11 +483,27 @@ main a.view-more:hover {
   main .landing-container .scholar-node-img {
     display: none;
   }
+  .instruction__title {
+    font-size: 1.5rem !important;
+  }
+  .instruction__steps_container {
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+    -webkit-box-pack: space-evenly !important;
+        -ms-flex-pack: space-evenly !important;
+            justify-content: space-evenly !important;
+  }
+  .instruction__steps {
+    width: 40% !important;
+  }
 }
 
 @media (max-width: 700px) {
-  .latest-events .events-heading {
-    font-size: 2.2rem !important;
+  .heading-title {
+    font-size: 2rem;
+  }
+  .title-image {
+    width: 70px;
   }
   .latest-events .events-container {
     -ms-grid-columns: 1fr !important;
@@ -402,6 +523,40 @@ main a.view-more:hover {
   }
   .latest-events a.view-more {
     padding: .7rem;
+  }
+  .instruction__body {
+    display: block !important;
+  }
+  .instruction__grant_req_container {
+    width: 100% !important;
+  }
+  .instruction__title {
+    font-size: 1.2rem !important;
+  }
+  .instruction__items {
+    font-size: .9rem !important;
+  }
+  .instruction__follow_steps_container {
+    padding: 0 !important;
+  }
+  .instruction__title_container {
+    margin: 20px 0 !important;
+  }
+  .instruction__steps_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .instruction__steps {
+    width: 100% !important;
+  }
+  .instruction__step_image {
+    height: 100px !important;
+    width: 50% !important;
+  }
+  .instruction__description {
+    font-size: .9rem !important;
   }
 }
 

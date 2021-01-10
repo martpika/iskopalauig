@@ -547,6 +547,7 @@ main .instruction__description {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-left: 0 !important;
   }
   .instruction__steps {
     width: 100% !important;

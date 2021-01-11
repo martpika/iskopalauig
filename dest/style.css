@@ -80,6 +80,10 @@ h1 {
   margin-right: auto;
 }
 
+.ta-center {
+  text-align: center;
+}
+
 .highlight {
   background: url(https://www.andyhooke.co.uk/wp-content/uploads/2018/02/yellow-brushstroke.png);
   background-repeat: no-repeat;
@@ -411,6 +415,38 @@ main .instruction__description {
   font-size: 1rem;
 }
 
+main .testimonials {
+  background-color: whitesmoke;
+  padding: 8% 10% 3% 10%;
+}
+
+main .testimonials__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+main .testimonials__image {
+  height: 500px;
+  width: 500px;
+}
+
+main .testimonials__container {
+  padding-left: 2rem;
+}
+
+main .testimonials__quote {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+main .testimonials__person_img {
+  border-radius: 100%;
+  width: 100px;
+}
+
 @media (max-width: 1000px) {
   .top-header-container {
     padding: 3px 5% 3px 2%;
@@ -496,6 +532,15 @@ main .instruction__description {
   .instruction__steps {
     width: 40% !important;
   }
+  .testimonials__image {
+    height: 400px !important;
+    width: 400px !important;
+  }
+  .testimonials__quote {
+    font-size: 2.2rem !important;
+    font-weight: 700;
+    line-height: 1.3;
+  }
 }
 
 @media (max-width: 700px) {
@@ -558,6 +603,18 @@ main .instruction__description {
   }
   .instruction__description {
     font-size: .9rem !important;
+  }
+  .testimonials__image {
+    display: none !important;
+  }
+  .testimonials__container {
+    padding-left: 0 !important;
+  }
+  .testimonials__quote {
+    font-size: 1.8rem !important;
+  }
+  .testimonials__person_img {
+    width: 80px !important;
   }
 }
 

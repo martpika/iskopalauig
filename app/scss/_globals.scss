@@ -62,6 +62,9 @@ h1 {
 .mr {
   margin-right: auto;
 }
+.ta-center {
+  text-align: center;
+}
 .highlight {
   background: url(https://www.andyhooke.co.uk/wp-content/uploads/2018/02/yellow-brushstroke.png);
   background-repeat: no-repeat;
@@ -309,7 +312,31 @@ main {
       color: #686868;
       font-size: 1rem;
     }
+  }
+  .testimonials {
+    background-color: rgb(245, 245, 245);
+    padding: 8% 10% 3% 10%;
 
+    &__body {
+      display: flex;
+      width: 100%;
+    }
+    &__image {
+      height: 500px;
+      width: 500px;
+    }
+    &__container {
+      padding-left: 2rem;
+    }
+    &__quote {
+      font-size: 2.5rem ;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    &__person_img {
+      border-radius: 100%;
+      width: 100px;
+    }
   }
 }
 // ########## Start of Mobile Responsive
@@ -406,6 +433,18 @@ main {
       width: 40% !important;
     }
   }
+  .testimonials {
+
+    &__image {
+      height: 400px !important;
+      width: 400px !important;
+    }
+    &__quote {
+      font-size: 2.2rem !important;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+  }
 }
 @media (max-width: 700px) {
   // ########## Class Presets
@@ -466,6 +505,21 @@ main {
     }
     &__description {
       font-size: .9rem !important;
+    }
+  }
+  .testimonials {
+
+    &__image {
+      display: none !important;
+    }
+    &__container {
+      padding-left: 0 !important;
+    }
+    &__quote {
+      font-size: 1.8rem !important;
+    }
+    &__person_img {
+      width: 80px !important;
     }
   }
 }

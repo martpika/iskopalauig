@@ -259,12 +259,6 @@ main {
       padding: 1.6rem 0;
       width: 30%;
     }
-    &__grant_container {
-
-    }
-    &__req_container {
-
-    }
     &__title {
       font-size: 1.7rem;
     }
@@ -337,6 +331,33 @@ main {
       border-radius: 100%;
       width: 100px;
     }
+  }
+}
+.footer {
+  align-items: center;
+  background-color: rgb(255, 255, 248);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8% 10%;
+
+  p {
+    margin: 0;
+  }
+  &__title_container {
+    align-items: center;
+    display: flex;
+  }
+  &__logo {
+    width: 40px;
+    height: 40px;
+  }
+  &__title {
+    font-family: "Merriweather", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0;
   }
 }
 // ########## Start of Mobile Responsive
@@ -520,6 +541,15 @@ main {
     }
     &__person_img {
       width: 80px !important;
+    }
+  }
+  .footer {
+    
+    p {
+      font-size: .9rem;
+    }
+    &__title {
+      font-size: 2rem !important;
     }
   }
 }

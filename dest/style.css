@@ -447,6 +447,50 @@ main .testimonials__person_img {
   width: 100px;
 }
 
+.footer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fffff8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8% 10%;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer__title_container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__logo {
+  width: 40px;
+  height: 40px;
+}
+
+.footer__title {
+  font-family: "Merriweather", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+}
+
 @media (max-width: 1000px) {
   .top-header-container {
     padding: 3px 5% 3px 2%;
@@ -615,6 +659,12 @@ main .testimonials__person_img {
   }
   .testimonials__person_img {
     width: 80px !important;
+  }
+  .footer p {
+    font-size: .9rem;
+  }
+  .footer__title {
+    font-size: 2rem !important;
   }
 }
 

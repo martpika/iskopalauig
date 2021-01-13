@@ -535,7 +535,7 @@ main .testimonials__person_img {
 }
 
 .login {
-  background-image: url("/images/municipal2.jpg");
+  background-image: url("images/municipal2.jpg");
 }
 
 .login__form {

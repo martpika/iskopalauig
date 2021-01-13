@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- Link for Bootstrap Framework using cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <!-- Link for fontawesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/PALAUIG-SEAL.png">
+
+  <!-- Link for the CSS -->
+  <link rel="stylesheet" href="dest/style.css">
+
+  <!-- Link for the fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header-here" id="header">
+    <div class="top-header-container flex">
+      <div class="brand-container flex">
+        <img class="logo" src="images/PALAUIG-SEAL.png" alt="">
+        <h2>ISKO NG PALAUIG</h2>
+      </div>
+      <nav class="nav-brand flex ml">
+        <li><a href="#"><i class="fab fa-facebook-f awesome"></i></a></li>
+        <li><a href="#"><i class="fas fa-phone awesome"></i></a></li>
+      </nav>
+      <div class="menu-bar hidden ml" onclick="slideMenu()">
+        <div class="menu-one"></div>
+        <div class="menu-two"></div>
+        <div class="menu-three"></div>
+      </div>
+    </div>
+    <nav class="link-list-container flex">
+      <ul>
+        <li><a class="closing-button hidden ml" onclick="slideMenu()" href="javascript:void(0);">&#x274c;</a></li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#">NEWS & EVENTS</a></li>
+        <li><a href="#">SERVICES</a></li>
+        <li><a href="#">CONTACT US</a></li>
+        <li><a href="about_us.html">ABOUT US</a></li>
+      </ul>
+      <div class="signers flex ml">
+        <li><a href="login.html">SIGN IN</a></li>
+        <li><a href="signup.html">SIGN UP</a></li>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="contact landing-padding">
+      <h1 class="contact__title landing-title ">Get in touch</h1>
+      <div class="contact__main_container">
+        <div class="contact__isko_info_container">
+          <div class="contact__plain_container landing-form">
+            <p class="contact__info_header">Feel free to contact us any time you have a question. You may email or text
+              us or you could message us through the message box at the right. Have a good day mga Isko.</p>
+            <h3 class="contact__info_title">Address</h3>
+            <p class="contact__description"><i class="fas fa-map-marker-alt info-logo"
+                style="color: rgb(238, 58, 58);"></i>Palauig, Zambales</p>
+            <p class="contact__description"><i class="fas fa-phone-alt info-logo"
+                style="color: rgb(238, 58, 58);"></i>2332-646-3432</p>
+            <h3 class="contact__info_title">Email</h3>
+            <p class="contact__description"><i class="far fa-envelope info-logo"
+                style="color: rgb(238, 58, 58);"></i>iskopalauig@gmail.com</p>
+            <h3 class="contact__info_title">Contact number</h3>
+            <p class="contact__description"><i class="fas fa-mobile-alt info-logo"
+                style="color: rgb(238, 58, 58);"></i>0916-567-473 Smart</p>
+            <p class="contact__description"><i class="fas fa-mobile-alt info-logo"
+                style="color: rgb(238, 58, 58);"></i>0937-454-9968 Globe</p>
+          </div>
+        </div>
+        <div class="contact__message_us_container landing-form">
+          <h3 class="contact__message_us_title">Message Us</h3>
+          <form action="#" class="contact__message_form">
+            <label for="sender-name">Name </label>
+            <input id="sender-name" class="contact__input landing-input-text" type="text">
+            <div class="contact__number_email_container">
+              <div class="contact__number_email">
+                <label for="sender-number">Your number</label>
+                <input id="sender-number" class="contact__input landing-input-text" type="text">
+              </div>
+              <div class="contact__number_email">
+                <label for="sender-email">Email</label>
+                <input id="sender-email" class="contact__input landing-input-text" type="text">
+              </div>
+            </div>
+            <textarea class="contact__message landing-input-text" name="" id="" cols="30" rows="10"
+              placeholder="Your message"></textarea>
+            <input class="contact__form_button btn btn-primary" type="submit">
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer__title_container">
+      <img src="images/PALAUIG-SEAL.png" alt="Logo of Isko ng Palauig" class="footer__logo">
+      <p class="footer__title">Isko ng Palauig</p>
+    </div>
+    <p class="">Copyright © 2021. All Rights Reserved</p>
+    <p class="">Palauig, Zambales</p>
+    <p class="">Tel No: +63 (4)-56789-338 </p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+    integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous">
+  </script>
+  <!-- Link for the JS script/scripts -->
+  <script src="app/js/script.js"></script>
+</body>
+
+</html>

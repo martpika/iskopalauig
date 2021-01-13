@@ -87,6 +87,41 @@ h1 {
 .title-image {
   width: 150px;
 }
+.landing-padding {
+  height: 100vh;
+  padding: 8% 10%;
+  text-align: center;
+}
+.landing-title {
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, .8);
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  letter-spacing: .2rem;
+}
+.landing-form {
+  background-color: rgb(247, 247, 247);
+  border: 1px solid rgb(231, 231, 231);
+  border-radius: .5rem;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+.landing-input-text {
+  border-radius: .4rem;
+  border: 1px solid rgba(0, 0, 0, .1);
+  font-size: .9rem;
+  outline: none;
+  padding: .5rem;
+}
+.info-logo {
+  margin-right: .5rem;
+  margin-left: .5rem;
+}
+.flex-100 {
+  display: flex;
+  width: 100%;
+}
 // ########## Start of Home Page
 .top-header-container {
   padding: 3px 15%;
@@ -360,6 +395,168 @@ main {
     margin: 0;
   }
 }
+
+// ########## Log In Page
+.login{
+  background-image: url("/images/municipal2.jpg");
+
+  &__form {
+    width: 20rem;
+  }
+  &__label {
+    color: rgba(0, 0, 0, .8);
+    position: relative;
+    float: left;
+    font-size: .9rem;
+  }
+  &__input_text {
+    margin: 0 0 .7rem 0  ;
+    width: 100%;
+  }
+  &__button {
+    padding: .6rem !important;
+  }
+  &__forgot_container {
+    display: flex;
+    margin: 1.5rem 0 ;
+    justify-content: space-evenly;
+  }
+  &__redirect {
+    background-color: #9fb3d8;
+    border-radius: .5rem;
+    color: #fff;
+    font-size: .8rem;
+    padding: .3rem;
+  }
+  &__help {
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 13px;
+    color: #000;
+    font-size: .8rem;
+    padding: .1rem;
+  }
+}
+// ########## Sign Up Page
+.signup {
+  background-color: rgb(255, 255, 255);
+
+  &__form {
+    width: 25rem;
+  }
+  &__name_container {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+  }
+  &__first_last_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  input[type="text"] {
+    margin: 0 0 .7rem 0  ;
+    padding: .2rem;
+    width: 100%;
+  }
+  &__email_phone {
+    text-align: left;
+  }
+  &__application_form {
+    font-size: .8rem;
+    margin: 1rem 0;
+  }
+  &__attach {
+    font-size: 1rem;
+    margin: 0;
+  }
+  input[type="file"] {
+    width: 12rem;
+  }
+}
+// ########## Contact Us Page
+.contact {
+  background-color: #fff;
+  height: auto;
+  width: 100%;
+
+  &__title {
+    text-align: left;
+  }
+  &__main_container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__isko_info_container {
+    text-align: left;
+    width: 35%;
+  }
+  &__plain_container {
+    box-shadow: 8px 8px 17px 1px rgba(0, 0, 0, .1);
+    border-radius: 9px;
+    border: none;
+    padding: 1rem;
+    text-align: left;
+  }
+  &__info_title {
+    font-weight: 600;
+  }
+  &__description {
+    margin-bottom: 5px;
+    margin-left: .6rem;
+  }
+  &__message_us_container {
+    box-shadow: 8px 8px 17px 1px rgba(0, 0, 0, .1);
+    border-radius: 9px;
+    border: none;
+    padding: .5rem 1.2rem .5rem 2.5rem;
+    width: 55%;
+  }
+  &__message_us_title {
+    font-weight: 800;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    margin: 0 0 1.5rem 0;
+    text-align: left;
+  }
+  &__message_form {
+    text-align: left;
+  }
+  &__number_email_container {
+    display: flex;
+    width: 100%;
+  }
+  &__input {
+    width: 100%;
+  }
+  &__number_email {
+    width: 50%;
+  }
+  &__message {
+    margin: 1rem 0 0 0;
+    resize: none;
+    width: 100%;
+  }
+  &__form_button {
+    border-radius: 9px;
+    outline: none;
+    border: 1px solid rgb(93, 93, 228);
+  }
+}
+// ########## About Us Page
+.about_us {
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  margin-bottom: 5rem;
+  padding: 8% 10%;
+  text-align: center;
+
+  &__title {
+    background-color: #9a8f67;
+    font-size: 3rem;
+  }
+
+}
 // ########## Start of Mobile Responsive
 @media (max-width: 1000px) {
   // ########## Home Page
@@ -475,6 +672,10 @@ main {
   .title-image {
     width: 70px;
   }
+  .landing-title {
+    font-size: 2rem;
+  }
+  // ########## Home Page
   .latest-events {
 
     .events-container {
@@ -550,6 +751,49 @@ main {
     }
     &__title {
       font-size: 2rem !important;
+    }
+  }
+  // ########## Log In Page
+  .login {
+    
+    &__form {
+      width: 100%;
+    }
+    &__redirect {
+      font-size: .7rem;
+    }
+  }
+  // ########## Sign Up Page
+  .signup {
+
+    &__form {
+      width: 100%;
+    }
+  }
+  // ########## Contact Us Page
+  .contact {
+
+    &__title {
+      text-align: center;
+    }
+    &__main_container {
+      flex-direction: column;
+    }
+    &__isko_info_container, &__message_us_container {
+      margin: 1.2rem 0 1.2rem 0;
+      width: 100%;
+    }
+    &__description, &__info_header {
+      font-size: .9rem;
+    }
+    &__message_us_title {
+      font-size: 1.8rem;
+    }
+    &__number_email_container {
+      flex-direction: column;
+    }
+    &__number_email {
+      width: 100%;
     }
   }
 }

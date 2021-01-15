@@ -50,12 +50,19 @@
         <li><a class="closing-button hidden ml" onclick="slideMenu()" href="javascript:void(0);">&#x274c;</a></li>
         <li><a href="index.html">HOME</a></li>
         <li><a href="#">NEWS & EVENTS</a></li>
-        <li><a href="#">SERVICES</a></li>
+        <li class="navbar-dropdown relative">
+          <a class="nav-toggle" href="#" onclick="dropShow()">SERVICES</a>
+          <ul id="dropMenu" class="nav-dropdown-menu">
+            <li><a href="#">Apply Scholarship</a></li>
+            <li><a href="#">Career Guidance</a></li>
+            <li><a href="#">Check Application</a></li>
+          </ul>
+        </li>
         <li><a href="contact_us.html">CONTACT US</a></li>
         <li><a href="about_us.html">ABOUT US</a></li>
       </ul>
       <div class="signers flex ml">
-        <li><a href="#">SIGN IN</a></li>
+        <li><a href="login.html">SIGN IN</a></li>
         <li><a href="signup.html">SIGN UP</a></li>
       </div>
     </nav>

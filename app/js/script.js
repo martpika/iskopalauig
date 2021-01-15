@@ -6,3 +6,8 @@ function slideMenu() {
     x.className = "header-here";
   }
 }
+
+function dropShow () {
+  document.querySelector("#dropMenu").classList.toggle("show");
+  console.log(2);
+}

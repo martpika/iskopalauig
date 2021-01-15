@@ -47,6 +47,12 @@ h1 {
 .awesome:hover {
   color: rgba(0, 0, 0, 0.5);
 }
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
 .hidden {
   display: none;
 }
@@ -177,6 +183,38 @@ h1 {
   }
   a {
     padding: 10px 0;
+    z-index: 50;
+  }
+  .nav-toggle::after {
+    content: "";
+    border-top: .2rem solid black;
+    border-left: .2rem solid transparent;
+    border-right: .2rem solid transparent;
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+  }
+  .nav-dropdown-menu {
+    background-color: rgb(197, 164, 93);
+    border-radius: 3px;
+    display: none;
+    left: -20%;
+    padding: .2rem;
+    position: absolute;
+    top: 100%;
+  }
+  .nav-dropdown-menu.show {
+    display: block;
+  }
+  .nav-dropdown-menu > li {
+    height: auto;
+    margin: 0 0;
+  }
+  .nav-dropdown-menu a {
+    padding: .5rem 1rem;
+  }
+  .nav-dropdown-menu li:not(:nth-of-type(3)) a {
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
   }
   a:hover {
     color: #fff;
@@ -334,6 +372,7 @@ main {
       width: 25%;
     }
     &__step_image {
+      border: 3px solid rgb(170, 163, 163);
       border-radius: 7px;
       width: 100%;
     }
@@ -438,7 +477,7 @@ main {
 }
 // ########## Sign Up Page
 .signup {
-  background-color: rgb(255, 255, 255);
+  background: url("bg/municipal3.jpg");
 
   &__form {
     width: 25rem;
@@ -601,6 +640,23 @@ main {
       color: #fff;
       width: 100%;
     }
+    .navbar-dropdown {
+      flex-direction: column;
+    }
+    .nav-dropdown-menu {
+      background-color: rgb(247, 247, 247);
+      border: 1px solid rgb(163, 163, 163);
+      left: 0;
+      position: static;
+      width: 100%;
+    }
+    .nav-dropdown-menu a {
+      color: #000;
+      padding: .8rem 1rem;
+    }
+    .nav-dropdown-menu li:not(:nth-of-type(3))> a {
+      border-bottom: 1px solid rgb(163, 163, 163);
+    }
     .signers {
       display: block;
       margin: 0;
@@ -609,6 +665,7 @@ main {
       display: inline-block;
       width: 20px;
     }
+
   }
   header.header-here.responsive {
 

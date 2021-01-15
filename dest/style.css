@@ -57,6 +57,14 @@ h1 {
   color: rgba(0, 0, 0, 0.5);
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
 .hidden {
   display: none;
 }
@@ -224,6 +232,44 @@ h1 {
 
 .link-list-container a {
   padding: 10px 0;
+  z-index: 50;
+}
+
+.link-list-container .nav-toggle::after {
+  content: "";
+  border-top: .2rem solid black;
+  border-left: .2rem solid transparent;
+  border-right: .2rem solid transparent;
+  display: inline-block;
+  margin-left: .255em;
+  vertical-align: .255em;
+}
+
+.link-list-container .nav-dropdown-menu {
+  background-color: #c5a45d;
+  border-radius: 3px;
+  display: none;
+  left: -20%;
+  padding: .2rem;
+  position: absolute;
+  top: 100%;
+}
+
+.link-list-container .nav-dropdown-menu.show {
+  display: block;
+}
+
+.link-list-container .nav-dropdown-menu > li {
+  height: auto;
+  margin: 0 0;
+}
+
+.link-list-container .nav-dropdown-menu a {
+  padding: .5rem 1rem;
+}
+
+.link-list-container .nav-dropdown-menu li:not(:nth-of-type(3)) a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .link-list-container a:hover {
@@ -449,6 +495,7 @@ main .instruction__steps {
 }
 
 main .instruction__step_image {
+  border: 3px solid #aaa3a3;
   border-radius: 7px;
   width: 100%;
 }
@@ -585,7 +632,7 @@ main .testimonials__person_img {
 }
 
 .signup {
-  background-color: white;
+  background: url("bg/municipal3.jpg");
 }
 
 .signup__form {
@@ -782,6 +829,26 @@ main .testimonials__person_img {
   .link-list-container a {
     color: #fff;
     width: 100%;
+  }
+  .link-list-container .navbar-dropdown {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .link-list-container .nav-dropdown-menu {
+    background-color: #f7f7f7;
+    border: 1px solid #a3a3a3;
+    left: 0;
+    position: static;
+    width: 100%;
+  }
+  .link-list-container .nav-dropdown-menu a {
+    color: #000;
+    padding: .8rem 1rem;
+  }
+  .link-list-container .nav-dropdown-menu li:not(:nth-of-type(3)) > a {
+    border-bottom: 1px solid #a3a3a3;
   }
   .link-list-container .signers {
     display: block;

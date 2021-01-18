@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- Link for Bootstrap Framework using cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <!-- Link for fontawesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/PALAUIG-SEAL.png">
+
+  <!-- Link for the CSS -->
+  <link rel="stylesheet" href="dest/style.css">
+
+  <!-- Link for the fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header-here" id="header">
+    <div class="top-header-container flex">
+      <div class="brand-container flex">
+        <img class="logo" src="images/PALAUIG-SEAL.png" alt="">
+        <h2>ISKO NG PALAUIG</h2>
+      </div>
+      <nav class="nav-brand flex ml">
+        <li><a href="#"><i class="fab fa-facebook-f awesome"></i></a></li>
+        <li><a href="contact_us.html"><i class="fas fa-phone awesome"></i></a></li>
+      </nav>
+      <div class="menu-bar hidden ml" onclick="slideMenu()">
+        <div class="menu-one"></div>
+        <div class="menu-two"></div>
+        <div class="menu-three"></div>
+      </div>
+    </div>
+    <nav class="link-list-container flex">
+      <ul>
+        <li><a class="closing-button hidden ml" onclick="slideMenu()" href="javascript:void(0);">&#x274c;</a></li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#">NEWS & EVENTS</a></li>
+        <li class="navbar-dropdown relative">
+          <a class="nav-toggle" href="#" onclick="dropShow()">SERVICES</a>
+          <ul id="dropMenu" class="nav-dropdown-menu">
+            <li><a href="">Apply Scholarship</a></li>
+            <li><a href="">Career Guidance</a></li>
+            <li><a href="">Check Application</a></li>
+          </ul>
+        </li>
+        <li><a href="contact_us.html">CONTACT US</a></li>
+        <li><a href="about_us.html">ABOUT US</a></li>
+      </ul>
+      <div class="signers flex ml">
+        <li><a href="login.html">SIGN IN</a></li>
+        <li><a href="signup.html">SIGN UP</a></li>
+      </div>
+    </nav>
+  </header>
+  <main class="landing-padding">
+    <h1 class="landing-title">News & Events</h1>
+    <div class="news_events_container">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active slide-guide"></li>
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="slide-guide"></li>
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="slide-guide"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a class="news-container" href=#>
+              <img src="photo/events_images/carousel_images/carousel-image-1.jpg" alt="" class="news-container__image">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a class="news-container" href="#">
+              <img src="photo/events_images/carousel_images/carousel-image-1.jpg" alt="" class="news-container__image">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a class="news-container" href="#">
+              <img src="photo/events_images/carousel_images/carousel-image-1.jpg" alt="" class="news-container__image">
+            </a>
+          </div>
+        </div>
+        <a class="carousel-control-prev carousel-button-left" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-none" aria-hidden="true"><i class="fas fa-chevron-left arrow-awesome"></i></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next carousel-button-right" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-none" aria-hidden="true"><i class="fas fa-chevron-right arrow-awesome"></i></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </div>
+      <div class="news">
+        <div class="news__grid_container">
+          <img src="photo/events_images/flex_images/left-1.jpg" alt="" class="news__image_grid">
+          <div class="news__header_container">
+            <p class="news__header_title">New requirements to be used in the scholarship program.</p>
+            <p class="news__header_information">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis explicabo ea saepe modi delectus voluptates illum doloribus at consequatur dolorum.</p>
+            <p class="news__header_information">December 13, 2020</p>
+          </div>
+          <a href="#" class="news__read_more">Read more</a>
+        </div>
+        <div class="news__grid_container">
+          <img src="photo/events_images/flex_images/left-1.jpg" alt="" class="news__image_grid">
+          <div class="news__header_container">
+            <p class="news__header_title">Career guidance for students now available.</p>
+            <p class="news__header_information">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis explicabo ea saepe modi delectus voluptates illum doloribus at consequatur dolorum.</p>
+            <p class="news__header_information">October 28, 2021</p>
+          </div>
+          <a href="#" class="news__read_more">Read more</a>
+        </div>
+        <div class="news__grid_container">
+          <img src="photo/events_images/flex_images/left-1.jpg" alt="" class="news__image_grid">
+          <div class="news__header_container">
+            <p class="news__header_title">New requirements to be used in the scholarship program.</p>
+            <p class="news__header_information">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis explicabo ea saepe modi delectus voluptates illum doloribus at consequatur dolorum.</p>
+            <p class="news__header_information">December 13, 2020</p>
+          </div>
+          <a href="#" class="news__read_more">Read more</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer__title_container">
+      <img src="images/PALAUIG-SEAL.png" alt="Logo of Isko ng Palauig" class="footer__logo">
+      <p class="footer__title">Isko ng Palauig</p>
+    </div>
+    <p class="">Copyright © 2021. All Rights Reserved</p>
+    <p class="">Palauig, Zambales</p>
+    <p class="">Tel No: +63 (4)-56789-338 </p>
+  </footer>
+  <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a
+      href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+    integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous">
+  </script>
+  <!-- Link for the JS script/scripts -->
+  <script src="app/js/script.js"></script>
+</body>
+
+</html>

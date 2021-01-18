@@ -35,7 +35,7 @@ a {
 }
 
 main {
-  background-color: #fffff8;
+  background-color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -51,6 +51,7 @@ h1 {
 
 .awesome {
   color: rgba(121, 124, 108, 0.5);
+  padding: 15px;
 }
 
 .awesome:hover {
@@ -59,6 +60,10 @@ h1 {
 
 .absolute {
   position: absolute;
+}
+
+.bg-none {
+  background: none;
 }
 
 .relative {
@@ -100,9 +105,11 @@ h1 {
 }
 
 .heading-title {
+  color: #fff;
   font-size: 3rem;
   font-weight: normal;
   letter-spacing: 3px;
+  padding: 6rem 0 3rem;
 }
 
 .card-big-heading {
@@ -121,14 +128,10 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.title-image {
-  width: 150px;
+  margin-bottom: 1.5rem;
 }
 
 .landing-padding {
-  height: 100vh;
   padding: 8% 10%;
   text-align: center;
 }
@@ -170,28 +173,50 @@ h1 {
   width: 100%;
 }
 
+.slide-guide {
+  background-color: #aa535a !important;
+  border-radius: 100% !important;
+  height: 10px !important;
+  margin: 0 .3rem !important;
+  width: 10px !important;
+}
+
+.arrow-awesome {
+  color: rgba(121, 124, 108, 0.5);
+  font-size: 2rem;
+}
+
+.carousel-button-left {
+  left: -7rem !important;
+  -webkit-transition: all .3s ease !important;
+  transition: all .3s ease !important;
+}
+
+.carousel-button-right {
+  right: -7rem !important;
+  -webkit-transition: all .3s ease !important;
+  transition: all .3s ease !important;
+}
+
 .top-header-container {
-  padding: 3px 15%;
+  padding: 3px 15% 0;
   text-align: center;
+}
+
+.top-header-container .brand-container {
+  padding: 5px 0 0 0;
 }
 
 .top-header-container .logo {
   height: 50px;
-  margin-top: 5px;
   width: 50px;
 }
 
 .top-header-container h2 {
   color: rgba(48, 48, 48, 0.7);
-  margin: 5px 0 0 0;
   font-family: 'Merriweather', serif;
   font-size: 2.7rem;
   font-weight: normal;
-  text-shadow: 0.5px 0.5px 1px rgba(236, 236, 74, 0.5);
-}
-
-.top-header-container a {
-  padding: 15px;
 }
 
 .top-header-container .menu-bar {
@@ -232,7 +257,6 @@ h1 {
 
 .link-list-container a {
   padding: 10px 0;
-  z-index: 50;
 }
 
 .link-list-container .nav-toggle::after {
@@ -306,13 +330,17 @@ main section.landing-container .scholar-node-img {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
-  position: relative;
 }
 
 main section.latest-events {
   background-color: whitesmoke;
-  padding: 8% 10% 3% 10%;
+  padding: 5% 10% 3% 10%;
   text-align: center;
+}
+
+main section.latest-events .events-title {
+  background: url("bg/news_bg.jpg") no-repeat;
+  background-size: cover;
 }
 
 main section.latest-events .events-container {
@@ -425,14 +453,22 @@ main .instruction {
   text-align: center;
 }
 
+main .instruction .instruction_title {
+  background: url("bg/instruction_bg.jpg") no-repeat;
+  background-size: cover;
+}
+
 main .instruction__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 1rem 1rem;
   text-align: left;
 }
 
 main .instruction__grant_req_container {
+  -webkit-box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.1);
   padding: 1.6rem 0;
   width: 30%;
 }
@@ -458,6 +494,8 @@ main .instruction__application_form {
 }
 
 main .instruction__follow_steps_container {
+  -webkit-box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.1);
   padding: 1.6rem 0 1.6rem 1.6rem;
 }
 
@@ -472,8 +510,8 @@ main .instruction__title_container {
 }
 
 main .instruction__pointing_right {
-  width: 60px;
   height: 60px;
+  width: 60px;
 }
 
 main .instruction__steps_container {
@@ -541,7 +579,9 @@ main .testimonials__person_img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #fffff8;
+  background-color: white;
+  border-top: 1px solid #dddddd;
+  color: rgba(0, 0, 0, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -556,6 +596,7 @@ main .testimonials__person_img {
 }
 
 .footer p {
+  font-size: .9rem;
   margin: 0;
 }
 
@@ -574,11 +615,111 @@ main .testimonials__person_img {
 }
 
 .footer__title {
+  color: #000 !important;
   font-family: "Merriweather", sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 2rem !important;
+  font-weight: 400;
   line-height: 1.4;
   margin: 0;
+}
+
+.news_events_container {
+  border: 1px solid #000;
+  overflow: hidden;
+}
+
+.carousel:hover > .carousel-button-left {
+  left: 0 !important;
+  -webkit-transition: all .3s ease !important;
+  transition: all .3s ease !important;
+}
+
+.carousel:hover > .carousel-button-right {
+  right: 0 !important;
+  -webkit-transition: all .3s ease !important;
+  transition: all .3s ease !important;
+}
+
+.news-container {
+  border: 1px solid #000;
+  display: block;
+  margin: 1rem;
+}
+
+.news {
+  border: 1px solid #6f00ff;
+  margin: 4rem 0 0 0;
+  padding: 1rem;
+  text-align: left;
+  width: 100%;
+}
+
+.news__grid_container {
+  border: 1px solid red;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px 500px;
+      grid-template-columns: 200px 500px;
+  -ms-grid-rows: 1fr auto;
+      grid-template-rows: 1fr auto;
+  margin: 1.5rem 0;
+  width: 70%;
+}
+
+.news__image_grid {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1 / 4;
+}
+
+.news__header_container {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  padding: 1rem 0 0 0;
+}
+
+.news__header_title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 0 0 .5rem 0;
+}
+
+.news__header_information {
+  font-size: .9rem;
+  margin: .4rem 0;
+}
+
+.news__read_more {
+  border-radius: 9px;
+  background-color: #6287ec;
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 500;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  -ms-grid-column-align: right;
+      justify-self: right;
+  padding: .1rem .5rem;
+}
+
+.news__read_more:hover {
+  background-color: #fff;
+  border: 1px solid #6287ec;
+  color: #000;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
 }
 
 .login {
@@ -685,7 +826,8 @@ main .testimonials__person_img {
 }
 
 .contact {
-  background-color: #fff;
+  background: url("bg/municipal4_contact.jpg") no-repeat center center;
+  background-size: cover;
   height: auto;
   width: 100%;
 }
@@ -907,9 +1049,7 @@ main .testimonials__person_img {
 @media (max-width: 700px) {
   .heading-title {
     font-size: 2rem;
-  }
-  .title-image {
-    width: 70px;
+    padding: 2rem !important;
   }
   .landing-title {
     font-size: 2rem;

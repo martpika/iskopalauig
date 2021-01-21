@@ -601,7 +601,7 @@ main .testimonials__person_img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 8% 10%;
+  padding: 15% 10%;
 }
 
 .footer p {
@@ -726,7 +726,7 @@ main .testimonials__person_img {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
-  padding: .5rem 1rem 1rem;
+  padding: .5rem 1rem 0;
 }
 
 .news__header_title {
@@ -1041,7 +1041,7 @@ main .testimonials__person_img {
     width: 40px !important;
   }
   .top-header-container h2 {
-    font-size: 2rem !important;
+    font-size: 1.9rem !important;
   }
   .top-header-container .nav-brand {
     display: none;
@@ -1159,7 +1159,7 @@ main .testimonials__person_img {
   .heading-title {
     font-size: 1.5rem;
     margin: 0;
-    padding: 1rem !important;
+    padding: 1.2rem !important;
   }
   .landing-title {
     font-size: 2rem;
@@ -1265,6 +1265,9 @@ main .testimonials__person_img {
   }
   .news_and_events {
     padding: 8% 3%;
+  }
+  .news_and_events__title {
+    font-size: 3rem;
   }
   .event_carousel__image {
     height: 200px;

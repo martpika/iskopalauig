@@ -92,21 +92,21 @@
         </div>
         <div class="contact__message_us_container landing-form">
           <h3 class="contact__message_us_title">Message Us</h3>
-          <form action="#" class="contact__message_form">
+          <form action="#" class="contact__message_form" id="form-submit-message">
             <label for="sender-name">Name </label>
-            <input id="sender-name" class="contact__input landing-input-text" type="text">
+            <input id="sender-name" class="contact__input landing-input-text" type="text" required>
             <div class="contact__number_email_container">
               <div class="contact__number_email">
                 <label for="sender-number">Your number</label>
-                <input id="sender-number" class="contact__input landing-input-text" type="text">
+                <input id="sender-number" class="contact__input landing-input-text" type="text" required>
               </div>
               <div class="contact__number_email">
                 <label for="sender-email">Email</label>
-                <input id="sender-email" class="contact__input landing-input-text" type="text">
+                <input id="sender-email" class="contact__input landing-input-text" type="email" required>
               </div>
             </div>
             <textarea class="contact__message landing-input-text" name="" id="" cols="30" rows="10"
-              placeholder="Your message"></textarea>
+              placeholder="Your message" required></textarea>
             <input class="contact__form_button btn btn-primary" type="submit">
           </form>
         </div>

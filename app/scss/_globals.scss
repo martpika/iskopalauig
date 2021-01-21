@@ -132,14 +132,14 @@ h1 {
   width: 100%;
 }
 .slide-guide {
-  background-color: rgb(170, 83, 90) !important;
+  background-color: rgb(0, 0, 0) !important;
   border-radius: 100% !important;
   height: 10px !important;
   margin: 0 .3rem !important;
   width: 10px !important;
 }
 .arrow-awesome {
-  color: rgba(121, 124, 108, 0.5);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 2rem;
 }
 .carousel-button-left {
@@ -149,6 +149,12 @@ h1 {
 .carousel-button-right {
   right: -7rem !important;
   transition: all .3s ease !important;
+}
+.apply-btn {
+  padding: 1rem;
+}
+.push_top {
+  top: 1.3rem;
 }
 // #################### Start of Home Page
 .top-header-container {
@@ -220,6 +226,7 @@ h1 {
     padding: .2rem;
     position: absolute;
     top: 100%;
+    z-index: 10;
   }
   .nav-dropdown-menu.show {
     display: block;
@@ -356,7 +363,7 @@ main {
     }
     &__grant_req_container {
       box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, .1);
-      padding: 1.6rem 0;
+      padding: 1rem;
       width: 30%;
     }
     &__title {
@@ -377,7 +384,7 @@ main {
     }
     &__follow_steps_container {
       box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, .1);
-      padding: 1.6rem 0 1.6rem 1.6rem;
+      padding: 1rem;
     }
     &__title_container {
       display: flex;
@@ -467,10 +474,6 @@ main {
   }
 }
 // #################### News and Events Page
-.news_events_container {
-  border: 1px solid #000;
-  overflow: hidden;
-}
 .carousel:hover > .carousel-button-left {
   left: 0 !important;
   transition: all .3s ease !important;
@@ -479,34 +482,67 @@ main {
   right: 0 !important;
   transition: all .3s ease !important;
 }
-.news-container {
-  border: 1px solid #000;
+.news_and_events {
+  background: url("bg/news_events_bg_2.jpg");
+
+  &__title {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 3rem;
+  }
+  &__container {
+    background-color: #fff;
+    overflow: hidden;
+    padding: 1rem;
+  }
+}
+.event_carousel {
   display: block;
-  margin: 1rem;
+  position: relative;
+  width: 100%;
+
+  &__description {
+    background-color: #fff;
+    bottom: 1rem;
+    left: 1rem;
+    position: absolute;
+    text-align: left;
+    width: 50%;
+  }
+  &__image {
+    height: 400px;
+    width: 100%;
+  }
 }
 .news {
-  border: 1px solid rgb(111, 0, 255);
+  background-color: #fff;
+  display: flex;
   margin: 4rem 0 0 0;
   padding: 1rem;
   text-align: left;
   width: 100%;
-
-  &__grid_container {
-    border: 1px solid red;
-    display: grid;
-    grid-template-columns: 200px 500px;
-    grid-template-rows: 1fr auto;
-    margin: 1.5rem 0;
+  &__grid_left {
     width: 70%;
   }
+  &__grid_container {
+    background-color: rgb(251, 251, 251);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 1fr auto;
+    margin: 1.5rem 0;
+    overflow: hidden;
+    width: 100%;
+  }
   &__image_grid {
+    border-radius: 5px;
     grid-column: 1 / 2;
     grid-row: 1 / 4;
   }
   &__header_container {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    padding: 1rem 0 0 0;
+    padding: .5rem 1rem 1rem;
   }
   &__header_title {
     font-family: "Montserrat", sans-serif;
@@ -519,8 +555,8 @@ main {
     margin: .4rem 0;
   }
   &__read_more {
-    border-radius: 9px;
-    background-color: #6287ec;
+    border-radius: 3px;
+    background-color: #3b60c5;
     color: #fff;
     font-size: .8rem;
     font-weight: 500;
@@ -528,13 +564,135 @@ main {
     grid-row: 3 / 4;
     justify-self: right;
     padding: .1rem .5rem;
+    transition: color .2s ease-in-out;
   }
   &__read_more:hover {
-    background-color: #fff;
-    border: 1px solid #6287ec;
-    color: #000;
-    transition: all .2s ease;
+    color: rgba(255, 255, 255, .6);
   }
+}
+// #################### Contact Us Page
+.contact {
+  background: url("bg/municipal4_contact.jpg") no-repeat center center;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+
+  &__title {
+    text-align: left;
+  }
+  &__main_container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__isko_info_container {
+    text-align: left;
+    width: 35%;
+  }
+  &__plain_container {
+    box-shadow: 8px 8px 17px 1px rgba(0, 0, 0, .1);
+    border-radius: 9px;
+    border: none;
+    padding: 1rem;
+    text-align: left;
+  }
+  &__info_title {
+    font-weight: 600;
+  }
+  &__description {
+    margin-bottom: 5px;
+    margin-left: .6rem;
+  }
+  &__message_us_container {
+    box-shadow: 8px 8px 17px 1px rgba(0, 0, 0, .1);
+    border-radius: 9px;
+    border: none;
+    padding: .5rem 1.2rem .5rem 2.5rem;
+    width: 55%;
+  }
+  &__message_us_title {
+    font-weight: 800;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    margin: 0 0 1.5rem 0;
+    text-align: left;
+  }
+  &__message_form {
+    text-align: left;
+  }
+  &__number_email_container {
+    display: flex;
+    width: 100%;
+  }
+  &__input {
+    width: 100%;
+  }
+  &__number_email {
+    width: 50%;
+  }
+  &__message {
+    margin: 1rem 0 0 0;
+    resize: none;
+    width: 100%;
+  }
+  &__form_button {
+    border-radius: 9px;
+    outline: none;
+    border: 1px solid rgb(93, 93, 228);
+  }
+}
+// #################### About Us Page
+.about_banner_bg {
+  height: 200%;
+  position: absolute;
+  width: 100%;
+ }
+ .about_banner_title {
+  color: #fff;
+  display: block;
+  font-weight: 700;
+  font-size: 3.5rem;
+  position: absolute;
+}
+.about_us_landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+  overflow: hidden;
+  position: relative;
+}
+.about {
+  padding: 5% 10%;
+
+  &__content {
+    display: flex;
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+    width: 100%;
+  } 
+  &__image {
+    align-self: flex-start;
+    height: 300px;  
+    width: 400px;
+  } 
+  &__description {
+    margin: 0 2rem;
+  }
+  &__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  &__info {
+    color: rgba(0, 0, 0, .7);
+    line-height: 1.6;
+    text-align: justify;
+  }
+}
+.support {
+  width: 100%;
 }
 // #################### Log In Page
 .login{
@@ -613,91 +771,6 @@ main {
     width: 12rem;
   }
 }
-// #################### Contact Us Page
-.contact {
-  background: url("bg/municipal4_contact.jpg") no-repeat center center;
-  background-size: cover;
-  height: auto;
-  width: 100%;
-
-  &__title {
-    text-align: left;
-  }
-  &__main_container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  &__isko_info_container {
-    text-align: left;
-    width: 35%;
-  }
-  &__plain_container {
-    box-shadow: 8px 8px 17px 1px rgba(0, 0, 0, .1);
-    border-radius: 9px;
-    border: none;
-    padding: 1rem;
-    text-align: left;
-  }
-  &__info_title {
-    font-weight: 600;
-  }
-  &__description {
-    margin-bottom: 5px;
-    margin-left: .6rem;
-  }
-  &__message_us_container {
-    box-shadow: 8px 8px 17px 1px rgba(0, 0, 0, .1);
-    border-radius: 9px;
-    border: none;
-    padding: .5rem 1.2rem .5rem 2.5rem;
-    width: 55%;
-  }
-  &__message_us_title {
-    font-weight: 800;
-    font-size: 2rem;
-    letter-spacing: 1.5px;
-    margin: 0 0 1.5rem 0;
-    text-align: left;
-  }
-  &__message_form {
-    text-align: left;
-  }
-  &__number_email_container {
-    display: flex;
-    width: 100%;
-  }
-  &__input {
-    width: 100%;
-  }
-  &__number_email {
-    width: 50%;
-  }
-  &__message {
-    margin: 1rem 0 0 0;
-    resize: none;
-    width: 100%;
-  }
-  &__form_button {
-    border-radius: 9px;
-    outline: none;
-    border: 1px solid rgb(93, 93, 228);
-  }
-}
-// #################### About Us Page
-.about_us {
-  background-color: rgb(255, 255, 255);
-  height: 100vh;
-  margin-bottom: 5rem;
-  padding: 8% 10%;
-  text-align: center;
-
-  &__title {
-    background-color: #9a8f67;
-    font-size: 3rem;
-  }
-
-}
 // ########## Start of Mobile Responsive
 @media (max-width: 1000px) {
   // ########## Home Page
@@ -747,7 +820,6 @@ main {
     }
     .nav-dropdown-menu {
       background-color: rgb(247, 247, 247);
-      border: 1px solid rgb(163, 163, 163);
       left: 0;
       position: static;
       width: 100%;
@@ -757,7 +829,7 @@ main {
       padding: .8rem 1rem;
     }
     .nav-dropdown-menu li:not(:nth-of-type(3))> a {
-      border-bottom: 1px solid rgb(163, 163, 163);
+      border-bottom: 1px solid #d8d8d8;
     }
     .signers {
       display: block;
@@ -822,18 +894,45 @@ main {
       line-height: 1.3;
     }
   }
+  // ########## About Us Page
+  .about {
+
+    &__image {
+      height: 220px;
+      width: 320px;
+    }
+    &__info {
+      font-size: .9rem;
+      line-height: 1.5;
+    }
+  }
 }
 @media (max-width: 700px) {
   // ########## Class Presets
   .heading-title {
-    font-size: 2rem ;
-    padding: 2rem !important;
+    font-size: 1.5rem ;
+    margin: 0;
+    padding: 1rem !important;
   }
   .landing-title {
     font-size: 2rem;
   }
+  .landing-form {
+    padding: 1rem 1rem 1.5rem !important;
+  }
+  .landing-input-text {
+    margin: 0 0 1.2rem 0 !important;
+  }
+  // ########## Html presets
+  header {
+    padding: 1rem .5rem;
+  }
   // ########## Home Page
+  .landing-container {
+    margin-bottom: 5rem !important;
+  }
   .latest-events {
+    padding: 8% 4% !important;
 
     .events-container {
       grid-template-columns: 1fr !important;
@@ -852,11 +951,15 @@ main {
     }
   }
   .instruction {
-    
+    padding: 8% 4% !important;
+
+    .instruction_title {
+      background-size: auto !important;
+    }
     &__body {
       display: block !important;
     }
-    &__grant_req_container {
+    &__grant_req_container, &__follow_steps_container {
       width: 100% !important;
     }
     &__title {
@@ -864,9 +967,6 @@ main {
     }
     &__items {
       font-size: .9rem !important;
-    }
-    &__follow_steps_container {
-      padding: 0 !important;
     }
     &__title_container {
       margin: 20px 0 !important;
@@ -910,9 +1010,54 @@ main {
       font-size: 2rem !important;
     }
   }
+  // ########## News and Events
+  .carousel-button-left {
+    left: 0 !important;
+  }
+  .carousel-button-right {
+    right: 0 !important;
+  }
+  .arrow-awesome {
+    color: rgba(0, 0, 0, .8);
+  }
+  .news_and_events {
+    padding: 8% 3%;
+  }
+  .event_carousel__image {
+    height: 200px;
+  }
+  .news {
+    margin: 2rem 0 0 0;
+
+    &__grid_left {
+      width: 100%;
+    }
+    &__grid_container {
+      grid-template-columns: auto;
+      grid-template-rows: 180px repeat(2, auto);
+    }
+    &__image_grid {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      height: 100%;
+      width: 100%;
+    }
+    &__header_container {
+      grid-column: 1/2;
+      grid-row: 2/ 3;
+    }
+    &__read_more {
+      grid-column: 1/2;
+      grid-row: 3/ 4;
+      justify-self: right;
+      padding: .5rem;
+    }
+  }
   // ########## Log In Page
   .login {
-    
+    height: 100vh;
+
+
     &__form {
       width: 100%;
     }
@@ -922,9 +1067,13 @@ main {
   }
   // ########## Sign Up Page
   .signup {
+    height: 100vh;
 
     &__form {
       width: 100%;
+    }
+    &__name_container {
+      flex-direction: column;
     }
   }
   // ########## Contact Us Page
@@ -951,6 +1100,28 @@ main {
     }
     &__number_email {
       width: 100%;
+    }
+  }
+  // ########## About Us Page
+  .about_us_landing {
+    height: 12rem;
+  }
+  .about_banner_title {
+    font-size: 2.3rem;
+  }
+  .about {
+
+    &__image {
+      align-self: center;
+    }
+    &__content {
+      flex-direction: column;
+    }
+    &__content:nth-of-type(2) {
+      flex-direction: column-reverse;
+    }
+    &__description {
+      margin: 0;
     }
   }
 }

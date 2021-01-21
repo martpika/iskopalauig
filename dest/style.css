@@ -174,7 +174,7 @@ h1 {
 }
 
 .slide-guide {
-  background-color: #aa535a !important;
+  background-color: black !important;
   border-radius: 100% !important;
   height: 10px !important;
   margin: 0 .3rem !important;
@@ -182,7 +182,7 @@ h1 {
 }
 
 .arrow-awesome {
-  color: rgba(121, 124, 108, 0.5);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 2rem;
 }
 
@@ -196,6 +196,14 @@ h1 {
   right: -7rem !important;
   -webkit-transition: all .3s ease !important;
   transition: all .3s ease !important;
+}
+
+.apply-btn {
+  padding: 1rem;
+}
+
+.push_top {
+  top: 1.3rem;
 }
 
 .top-header-container {
@@ -277,6 +285,7 @@ h1 {
   padding: .2rem;
   position: absolute;
   top: 100%;
+  z-index: 10;
 }
 
 .link-list-container .nav-dropdown-menu.show {
@@ -469,7 +478,7 @@ main .instruction__body {
 main .instruction__grant_req_container {
   -webkit-box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.1);
-  padding: 1.6rem 0;
+  padding: 1rem;
   width: 30%;
 }
 
@@ -496,7 +505,7 @@ main .instruction__application_form {
 main .instruction__follow_steps_container {
   -webkit-box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.1);
-  padding: 1.6rem 0 1.6rem 1.6rem;
+  padding: 1rem;
 }
 
 main .instruction__title_container {
@@ -623,11 +632,6 @@ main .testimonials__person_img {
   margin: 0;
 }
 
-.news_events_container {
-  border: 1px solid #000;
-  overflow: hidden;
-}
-
 .carousel:hover > .carousel-button-left {
   left: 0 !important;
   -webkit-transition: all .3s ease !important;
@@ -640,33 +644,73 @@ main .testimonials__person_img {
   transition: all .3s ease !important;
 }
 
-.news-container {
-  border: 1px solid #000;
+.news_and_events {
+  background: url("bg/news_events_bg_2.jpg");
+}
+
+.news_and_events__title {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.news_and_events__container {
+  background-color: #fff;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.event_carousel {
   display: block;
-  margin: 1rem;
+  position: relative;
+  width: 100%;
+}
+
+.event_carousel__description {
+  background-color: #fff;
+  bottom: 1rem;
+  left: 1rem;
+  position: absolute;
+  text-align: left;
+  width: 50%;
+}
+
+.event_carousel__image {
+  height: 400px;
+  width: 100%;
 }
 
 .news {
-  border: 1px solid #6f00ff;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 4rem 0 0 0;
   padding: 1rem;
   text-align: left;
   width: 100%;
 }
 
-.news__grid_container {
-  border: 1px solid red;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 200px 500px;
-      grid-template-columns: 200px 500px;
-  -ms-grid-rows: 1fr auto;
-      grid-template-rows: 1fr auto;
-  margin: 1.5rem 0;
+.news__grid_left {
   width: 70%;
 }
 
+.news__grid_container {
+  background-color: #fbfbfb;
+  border-radius: 5px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px 1fr;
+      grid-template-columns: 200px 1fr;
+  -ms-grid-rows: 1fr auto;
+      grid-template-rows: 1fr auto;
+  margin: 1.5rem 0;
+  overflow: hidden;
+  width: 100%;
+}
+
 .news__image_grid {
+  border-radius: 5px;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
@@ -682,7 +726,7 @@ main .testimonials__person_img {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
-  padding: 1rem 0 0 0;
+  padding: .5rem 1rem 1rem;
 }
 
 .news__header_title {
@@ -698,8 +742,8 @@ main .testimonials__person_img {
 }
 
 .news__read_more {
-  border-radius: 9px;
-  background-color: #6287ec;
+  border-radius: 3px;
+  background-color: #3b60c5;
   color: #fff;
   font-size: .8rem;
   font-weight: 500;
@@ -712,14 +756,177 @@ main .testimonials__person_img {
   -ms-grid-column-align: right;
       justify-self: right;
   padding: .1rem .5rem;
+  -webkit-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
 }
 
 .news__read_more:hover {
-  background-color: #fff;
-  border: 1px solid #6287ec;
-  color: #000;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contact {
+  background: url("bg/municipal4_contact.jpg") no-repeat center center;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+}
+
+.contact__title {
+  text-align: left;
+}
+
+.contact__main_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.contact__isko_info_container {
+  text-align: left;
+  width: 35%;
+}
+
+.contact__plain_container {
+  -webkit-box-shadow: 8px 8px 17px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 8px 8px 17px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 9px;
+  border: none;
+  padding: 1rem;
+  text-align: left;
+}
+
+.contact__info_title {
+  font-weight: 600;
+}
+
+.contact__description {
+  margin-bottom: 5px;
+  margin-left: .6rem;
+}
+
+.contact__message_us_container {
+  -webkit-box-shadow: 8px 8px 17px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 8px 8px 17px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 9px;
+  border: none;
+  padding: .5rem 1.2rem .5rem 2.5rem;
+  width: 55%;
+}
+
+.contact__message_us_title {
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  margin: 0 0 1.5rem 0;
+  text-align: left;
+}
+
+.contact__message_form {
+  text-align: left;
+}
+
+.contact__number_email_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.contact__input {
+  width: 100%;
+}
+
+.contact__number_email {
+  width: 50%;
+}
+
+.contact__message {
+  margin: 1rem 0 0 0;
+  resize: none;
+  width: 100%;
+}
+
+.contact__form_button {
+  border-radius: 9px;
+  outline: none;
+  border: 1px solid #5d5de4;
+}
+
+.about_banner_bg {
+  height: 200%;
+  position: absolute;
+  width: 100%;
+}
+
+.about_banner_title {
+  color: #fff;
+  display: block;
+  font-weight: 700;
+  font-size: 3.5rem;
+  position: absolute;
+}
+
+.about_us_landing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.about {
+  padding: 5% 10%;
+}
+
+.about__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.about__image {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  height: 300px;
+  width: 400px;
+}
+
+.about__description {
+  margin: 0 2rem;
+}
+
+.about__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.about__info {
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.support {
+  width: 100%;
 }
 
 .login {
@@ -825,111 +1032,6 @@ main .testimonials__person_img {
   width: 12rem;
 }
 
-.contact {
-  background: url("bg/municipal4_contact.jpg") no-repeat center center;
-  background-size: cover;
-  height: auto;
-  width: 100%;
-}
-
-.contact__title {
-  text-align: left;
-}
-
-.contact__main_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-}
-
-.contact__isko_info_container {
-  text-align: left;
-  width: 35%;
-}
-
-.contact__plain_container {
-  -webkit-box-shadow: 8px 8px 17px 1px rgba(0, 0, 0, 0.1);
-          box-shadow: 8px 8px 17px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 9px;
-  border: none;
-  padding: 1rem;
-  text-align: left;
-}
-
-.contact__info_title {
-  font-weight: 600;
-}
-
-.contact__description {
-  margin-bottom: 5px;
-  margin-left: .6rem;
-}
-
-.contact__message_us_container {
-  -webkit-box-shadow: 8px 8px 17px 1px rgba(0, 0, 0, 0.1);
-          box-shadow: 8px 8px 17px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 9px;
-  border: none;
-  padding: .5rem 1.2rem .5rem 2.5rem;
-  width: 55%;
-}
-
-.contact__message_us_title {
-  font-weight: 800;
-  font-size: 2rem;
-  letter-spacing: 1.5px;
-  margin: 0 0 1.5rem 0;
-  text-align: left;
-}
-
-.contact__message_form {
-  text-align: left;
-}
-
-.contact__number_email_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.contact__input {
-  width: 100%;
-}
-
-.contact__number_email {
-  width: 50%;
-}
-
-.contact__message {
-  margin: 1rem 0 0 0;
-  resize: none;
-  width: 100%;
-}
-
-.contact__form_button {
-  border-radius: 9px;
-  outline: none;
-  border: 1px solid #5d5de4;
-}
-
-.about_us {
-  background-color: white;
-  height: 100vh;
-  margin-bottom: 5rem;
-  padding: 8% 10%;
-  text-align: center;
-}
-
-.about_us__title {
-  background-color: #9a8f67;
-  font-size: 3rem;
-}
-
 @media (max-width: 1000px) {
   .top-header-container {
     padding: 3px 5% 3px 2%;
@@ -980,7 +1082,6 @@ main .testimonials__person_img {
   }
   .link-list-container .nav-dropdown-menu {
     background-color: #f7f7f7;
-    border: 1px solid #a3a3a3;
     left: 0;
     position: static;
     width: 100%;
@@ -990,7 +1091,7 @@ main .testimonials__person_img {
     padding: .8rem 1rem;
   }
   .link-list-container .nav-dropdown-menu li:not(:nth-of-type(3)) > a {
-    border-bottom: 1px solid #a3a3a3;
+    border-bottom: 1px solid #d8d8d8;
   }
   .link-list-container .signers {
     display: block;
@@ -1044,15 +1145,39 @@ main .testimonials__person_img {
     font-weight: 700;
     line-height: 1.3;
   }
+  .about__image {
+    height: 220px;
+    width: 320px;
+  }
+  .about__info {
+    font-size: .9rem;
+    line-height: 1.5;
+  }
 }
 
 @media (max-width: 700px) {
   .heading-title {
-    font-size: 2rem;
-    padding: 2rem !important;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 1rem !important;
   }
   .landing-title {
     font-size: 2rem;
+  }
+  .landing-form {
+    padding: 1rem 1rem 1.5rem !important;
+  }
+  .landing-input-text {
+    margin: 0 0 1.2rem 0 !important;
+  }
+  header {
+    padding: 1rem .5rem;
+  }
+  .landing-container {
+    margin-bottom: 5rem !important;
+  }
+  .latest-events {
+    padding: 8% 4% !important;
   }
   .latest-events .events-container {
     -ms-grid-columns: 1fr !important;
@@ -1073,10 +1198,16 @@ main .testimonials__person_img {
   .latest-events a.view-more {
     padding: .7rem;
   }
+  .instruction {
+    padding: 8% 4% !important;
+  }
+  .instruction .instruction_title {
+    background-size: auto !important;
+  }
   .instruction__body {
     display: block !important;
   }
-  .instruction__grant_req_container {
+  .instruction__grant_req_container, .instruction__follow_steps_container {
     width: 100% !important;
   }
   .instruction__title {
@@ -1084,9 +1215,6 @@ main .testimonials__person_img {
   }
   .instruction__items {
     font-size: .9rem !important;
-  }
-  .instruction__follow_steps_container {
-    padding: 0 !important;
   }
   .instruction__title_container {
     margin: 20px 0 !important;
@@ -1126,14 +1254,82 @@ main .testimonials__person_img {
   .footer__title {
     font-size: 2rem !important;
   }
+  .carousel-button-left {
+    left: 0 !important;
+  }
+  .carousel-button-right {
+    right: 0 !important;
+  }
+  .arrow-awesome {
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .news_and_events {
+    padding: 8% 3%;
+  }
+  .event_carousel__image {
+    height: 200px;
+  }
+  .news {
+    margin: 2rem 0 0 0;
+  }
+  .news__grid_left {
+    width: 100%;
+  }
+  .news__grid_container {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: 180px (auto)[2];
+        grid-template-rows: 180px repeat(2, auto);
+  }
+  .news__image_grid {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    height: 100%;
+    width: 100%;
+  }
+  .news__header_container {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/ 3;
+  }
+  .news__read_more {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/ 4;
+    -ms-grid-column-align: right;
+        justify-self: right;
+    padding: .5rem;
+  }
+  .login {
+    height: 100vh;
+  }
   .login__form {
     width: 100%;
   }
   .login__redirect {
     font-size: .7rem;
   }
+  .signup {
+    height: 100vh;
+  }
   .signup__form {
     width: 100%;
+  }
+  .signup__name_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .contact__title {
     text-align: center;
@@ -1162,6 +1358,32 @@ main .testimonials__person_img {
   }
   .contact__number_email {
     width: 100%;
+  }
+  .about_us_landing {
+    height: 12rem;
+  }
+  .about_banner_title {
+    font-size: 2.3rem;
+  }
+  .about__image {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .about__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about__content:nth-of-type(2) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .about__description {
+    margin: 0;
   }
 }
 

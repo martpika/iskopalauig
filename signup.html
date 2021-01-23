@@ -74,22 +74,24 @@
         <div class="signup__name_container">
           <div class="signup__first_last_container">
             <label for="first-name">First name</label>
-            <input id="first-name" type="text" class="signup__first_last landing-input-text">
+            <input id="first-name" type="text" class="signup__first_last_input landing-input-text">
           </div>
           <div class="signup__first_last_container">
             <label for="last-name">Last name</label>
-            <input id="last-name" type="text" class="signup__first_last landing-input-text">
+            <input id="last-name" type="text" class="signup__first_last_input landing-input-text">
           </div>
         </div>
         <div class="signup__email_phone">
           <label for="email-signup">Email</label>
-          <input id="email-signup" class="landing-input-text" type="text">
+          <input id="email-signup" class="signup__input_text landing-input-text" type="email" required>
           <label for="phone-signup">Phone number</label>
-          <input id="phone-signup" class="landing-input-text" type="text">
+          <input id="phone-signup" class="signup__input_text landing-input-text" type="text" required>
+          <label for="password-signup">Password</label>
+          <input id="password-signup" class="signup__input_text landing-input-text" type="password" required>
         </div>
         <div class="signup__application_form">
           <p class="signup__attach">Attach your application form: </p>
-          <input id="application-form" type="file">
+          <input id="application-form" type="file" required> 
         </div>
         <input type="submit" class="btn btn-primary">
       </form>
